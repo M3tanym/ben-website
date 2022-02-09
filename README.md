@@ -1,11 +1,14 @@
-# Ben's Personal Website
+# Personal Website
 
+### Built with...
+- Thank you, [Create React App](https://github.com/facebook/create-react-app)
 - Material UI v4 
 - Material Icons
 - Some custom icons
-- Thank you [Create React App](https://github.com/facebook/create-react-app)
 - GitHub pages
 
-## Running
+### Running
 
-You know what to do
+You know what to do...
+
+`npm start`

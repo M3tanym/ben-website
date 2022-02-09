@@ -18,7 +18,7 @@ const LoadApp = props =>
 
 const App = () =>
 {
-  const darkMode = useMediaQuery('(prefers-color-scheme: light)');
+  const darkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   const theme = useMemo(
       () =>

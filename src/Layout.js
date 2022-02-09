@@ -40,7 +40,7 @@ const useStyles = makeStyles({
 	}
 });
 
-const Layout = (props) =>
+const Layout = () =>
 {
 	const classes = useStyles();
 	return (
