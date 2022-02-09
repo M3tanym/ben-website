@@ -1,2 +1,28 @@
-  on:
-  jobs:
+name: Build Site and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.2.3
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: docs
+          folder: dist
