@@ -5,7 +5,8 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import PlanePic from "./plane.jpg";
+import PlaneLight from "./images/plane_light.png";
+import PlaneDark from "./images/plane_dark.png";
 
 import { Container, Grid, Typography } from "@material-ui/core";
 import { Instagram, LinkedIn, GitHub, Twitter, YouTube } from '@material-ui/icons';
@@ -40,9 +41,12 @@ const useStyles = makeStyles({
 	}
 });
 
-const Layout = () =>
+const Layout = (props) =>
 {
 	const classes = useStyles();
+	const dm = props.darkMode;
+	const plane = dm ? PlaneDark : PlaneLight;
+
 	return (
 		<Container>
 			<Grid
@@ -58,7 +62,7 @@ const Layout = () =>
 					<Card className={classes.me}>
 						<CardMedia
 							className={classes.media}
-							image={PlanePic}
+							image={plane}
 							title="Plane"
 						/>
 						<CardContent>
