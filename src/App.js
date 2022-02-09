@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useMemo } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from "@material-ui/core/CssBaseline";
+
+import { SnackbarProvider, useSnackbar } from 'notistack';
+
+import Layout from "./Layout";
+
+const LoadApp = props =>
+{
+  const { enqueueSnackbar } = useSnackbar();
+  const produceSnackBar = (message, variant="error") => enqueueSnackbar(message, { variant: variant });
+
+  return <Layout produceSnackBar={produceSnackBar} {...props}/>;
+};
+
+const App = () =>
+{
+  const darkMode = useMediaQuery('(prefers-color-scheme: light)');
+
+  const theme = useMemo(
+      () =>
+          createTheme ({
+            palette: {
+              type: darkMode ? 'dark' : 'light',
+            },
+          }),
+      [darkMode],
   );
-}
+
+  return (
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <SnackbarProvider maxSnack={3} preventDuplicate>
+          <LoadApp darkMode={darkMode}/>
+        </SnackbarProvider>
+      </ThemeProvider>
+  );
+};
 
 export default App;
