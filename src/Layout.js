@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import PlaneLight from "./images/plane_light.png";
 import PlaneDark from "./images/plane_dark.png";
+import Me from "./images/me.jpg";
 
 import { Container, Grid, Typography } from "@material-ui/core";
 import { Instagram, LinkedIn, GitHub, Twitter, YouTube } from '@material-ui/icons';
@@ -21,9 +22,8 @@ const useStyles = makeStyles({
 		height: "250px"
 	},
 	intro: {
-		fontSize: "1.1rem",
-		fontFamily: "Lucida Handwriting, cursive, sans-serif",
-		color: "grey"
+		fontSize: "1.2rem",
+		fontFamily: "Lucida Handwriting, cursive, sans-serif"
 	},
 	title: {
 		fontSize: "3rem",
@@ -34,7 +34,7 @@ const useStyles = makeStyles({
 	info: {
 		marginBottom: "20px",
 		fontFamily: "monospace",
-		color: "grey"
+		fontSize: "1.2rem",
 	},
 	plat: {
 		fontFamily: "monospace"
@@ -45,7 +45,9 @@ const Layout = (props) =>
 {
 	const classes = useStyles();
 	const dm = props.darkMode;
-	const plane = dm ? PlaneDark : PlaneLight;
+	// const img = dm ? PlaneDark : PlaneLight;
+	const bg = dm ? "#303030" : "#fafafa";
+	const img = Me;
 
 	return (
 		<Container>
@@ -58,12 +60,15 @@ const Layout = (props) =>
 				spacing={2}
 				style={{height: "100vh"}}
 				>
+
+				{/*Mobile accent color (like Safari top bar)*/}
+				<meta name="theme-color" content={bg} />
 				<Grid item>
 					<Card className={classes.me}>
 						<CardMedia
 							className={classes.media}
-							image={plane}
-							title="Plane"
+							image={img}
+							title="Image"
 						/>
 						<CardContent>
 							<Typography className={classes.intro}>
@@ -80,19 +85,24 @@ const Layout = (props) =>
 								You can find me on these platforms:
 							</Typography>
 						</CardContent>
-						<CardActions>
-							<LinkButton href={"https://www.linkedin.com/in/ben-gillett"} icon={<LinkedIn />}/>
-							<LinkButton href={"https://medium.com/@ben-gillett"} icon={<MediumIcon />}/>
-							<LinkButton href={"https://www.github.com/M3tanym"} icon={<GitHub />}/>
-							<LinkButton href={"https://stackoverflow.com/users/13765237/ben-gillett"} icon={<StackOverflowIcon />}/>
-						</CardActions>		
-						<CardActions>
-							<LinkButton href={"https://www.instagram.com/benjamin_gillett"} icon={<Instagram />}/>
-							<LinkButton href={"https://twitter.com/BnjmnGillett"} icon={<Twitter />}/>
-							<LinkButton href={"https://www.youtube.com/channel/UCDDCEvRr9bflGGlXrbyKkHQ"} icon={<YouTube />}/>
-							<LinkButton href={"https://open.spotify.com/user/thesilentwatcher7"} icon={<SpotifyIcon />}/>
-							<LinkButton href={"https://www.strava.com/athletes/42381976"} icon={<StravaIcon />}/>
-						</CardActions>
+						<div style={{ display:'flex', justifyContent:'center' }}>
+							<CardActions>
+								<LinkButton href={"https://www.linkedin.com/in/ben-gillett"} icon={<LinkedIn />}/>
+								<LinkButton href={"https://www.github.com/M3tanym"} icon={<GitHub />}/>
+								<LinkButton href={"https://medium.com/@ben-gillett"} icon={<MediumIcon />}/>
+								<LinkButton href={"https://stackoverflow.com/users/13765237/ben-gillett"} icon={<StackOverflowIcon />}/>
+							</CardActions>
+						</div>
+						<div style={{ display:'flex', justifyContent:'center' }}>
+							<CardActions>
+								<LinkButton href={"https://www.instagram.com/benjamin_gillett"} icon={<Instagram />}/>
+								<LinkButton href={"https://twitter.com/BnjmnGillett"} icon={<Twitter />}/>
+								{/*<LinkButton href={"https://www.youtube.com/channel/UCDDCEvRr9bflGGlXrbyKkHQ"} icon={<YouTube />}/>*/}
+								{/*YouTube account not mature enough for profile yet...*/}
+								<LinkButton href={"https://www.strava.com/athletes/42381976"} icon={<StravaIcon />}/>
+								<LinkButton href={"https://open.spotify.com/user/thesilentwatcher7"} icon={<SpotifyIcon />}/>
+							</CardActions>
+						</div>
 					</Card>
 				</Grid>
 			</Grid>
