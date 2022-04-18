@@ -5,12 +5,13 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import PlaneLight from "./images/plane_light.png";
-import PlaneDark from "./images/plane_dark.png";
+// import PlaneLight from "./images/plane_light.png";
+// import PlaneDark from "./images/plane_dark.png";
 import Me from "./images/me.jpg";
 
 import { Container, Grid, Typography } from "@material-ui/core";
-import { Instagram, LinkedIn, GitHub, Twitter, YouTube } from '@material-ui/icons';
+import { Instagram, LinkedIn, GitHub, Twitter } from '@material-ui/icons';
+// import { YouTube } from '@material-ui/icons';
 import { SpotifyIcon, MediumIcon, StackOverflowIcon, StravaIcon } from "./CustomIcons";
 import LinkButton from "./LinkButton";
 
