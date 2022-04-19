@@ -5,8 +5,6 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-// import PlaneLight from "./images/plane_light.png";
-// import PlaneDark from "./images/plane_dark.png";
 import Me from "./images/me.jpg";
 
 import { Container, Grid, Typography } from "@material-ui/core";
@@ -56,7 +54,6 @@ const Layout = (props) =>
 {
 	const classes = useStyles();
 	const dm = props.darkMode;
-	// const img = dm ? PlaneDark : PlaneLight;
 	const bg = dm ? "#303030" : "#fafafa";
 	const img = Me;
 
