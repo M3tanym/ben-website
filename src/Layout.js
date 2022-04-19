@@ -16,15 +16,21 @@ import { SpotifyIcon, MediumIcon, StackOverflowIcon, StravaIcon } from "./Custom
 import LinkButton from "./LinkButton";
 
 const useStyles = makeStyles({
+	main: {
+		height: "90vh"
+	},
 	me: {
-		width: "350px"
+		width: "350px",
+		marginTop: "7vh"
 	},
 	media: {
 		height: "250px"
 	},
 	intro: {
-		fontSize: "1.2rem",
-		fontFamily: "Lucida Handwriting, cursive, sans-serif"
+		// fontFamily: "Lucida Handwriting, cursive, sans-serif",
+		fontFamily: "Square Peg, cursive",
+		fontSize: "2.1rem",
+		lineHeight: "0.85em"
 	},
 	title: {
 		fontSize: "3rem",
@@ -39,6 +45,10 @@ const useStyles = makeStyles({
 	},
 	plat: {
 		fontFamily: "monospace"
+	},
+	link_row: {
+		display:'flex',
+		justifyContent:'center'
 	}
 });
 
@@ -52,18 +62,18 @@ const Layout = (props) =>
 
 	return (
 		<Container>
+			{/*Mobile accent color (like Safari top bar)*/}
+			<meta name="theme-color" content={bg} />
 			<Grid
 				container
 				direction={"column"}
-				justifyContent={"center"}
+				// justifyContent={"center"}
 				alignContent={"center"}
 				alignItems={"center"}
 				spacing={2}
-				style={{height: "100vh"}}
+				className={classes.main}
 				>
 
-				{/*Mobile accent color (like Safari top bar)*/}
-				<meta name="theme-color" content={bg} />
 				<Grid item>
 					<Card className={classes.me}>
 						<CardMedia
@@ -86,24 +96,20 @@ const Layout = (props) =>
 								You can find me on these platforms:
 							</Typography>
 						</CardContent>
-						<div style={{ display:'flex', justifyContent:'center' }}>
-							<CardActions>
-								<LinkButton href={"https://www.linkedin.com/in/ben-gillett"} icon={<LinkedIn />}/>
-								<LinkButton href={"https://www.github.com/M3tanym"} icon={<GitHub />}/>
-								<LinkButton href={"https://medium.com/@ben-gillett"} icon={<MediumIcon />}/>
-								<LinkButton href={"https://stackoverflow.com/users/13765237/ben-gillett"} icon={<StackOverflowIcon />}/>
-							</CardActions>
-						</div>
-						<div style={{ display:'flex', justifyContent:'center' }}>
-							<CardActions>
-								<LinkButton href={"https://www.instagram.com/benjamin_gillett"} icon={<Instagram />}/>
-								<LinkButton href={"https://twitter.com/BnjmnGillett"} icon={<Twitter />}/>
-								{/*<LinkButton href={"https://www.youtube.com/channel/UCDDCEvRr9bflGGlXrbyKkHQ"} icon={<YouTube />}/>*/}
-								{/*YouTube account not mature enough for profile yet...*/}
-								<LinkButton href={"https://www.strava.com/athletes/42381976"} icon={<StravaIcon />}/>
-								<LinkButton href={"https://open.spotify.com/user/thesilentwatcher7"} icon={<SpotifyIcon />}/>
-							</CardActions>
-						</div>
+						<CardActions className={classes.link_row}>
+							<LinkButton href={"https://www.linkedin.com/in/ben-gillett"} icon={<LinkedIn />}/>
+							<LinkButton href={"https://www.github.com/M3tanym"} icon={<GitHub />}/>
+							<LinkButton href={"https://medium.com/@ben-gillett"} icon={<MediumIcon />}/>
+							<LinkButton href={"https://stackoverflow.com/users/13765237/ben-gillett"} icon={<StackOverflowIcon />}/>
+						</CardActions>
+						<CardActions className={classes.link_row}>
+							<LinkButton href={"https://www.instagram.com/benjamin_gillett"} icon={<Instagram />}/>
+							<LinkButton href={"https://twitter.com/BnjmnGillett"} icon={<Twitter />}/>
+							{/*<LinkButton href={"https://www.youtube.com/channel/UCDDCEvRr9bflGGlXrbyKkHQ"} icon={<YouTube />}/>*/}
+							{/*YouTube account not mature enough for profile yet...*/}
+							<LinkButton href={"https://www.strava.com/athletes/42381976"} icon={<StravaIcon />}/>
+							<LinkButton href={"https://open.spotify.com/user/thesilentwatcher7"} icon={<SpotifyIcon />}/>
+						</CardActions>
 					</Card>
 				</Grid>
 			</Grid>

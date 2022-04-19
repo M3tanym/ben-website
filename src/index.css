@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Square+Peg');
+
 body {
-  overflow: hidden;
+  /*overflow: hidden;*/
+  /*height: 99vh;*/
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -9,6 +12,10 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.handwritten {
+
+  font-size: 1.2rem;
 }
