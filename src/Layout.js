@@ -8,9 +8,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Me from "./images/me.jpg";
 
 import { Container, Grid, Typography } from "@material-ui/core";
-import { Instagram, LinkedIn, GitHub, Twitter } from '@material-ui/icons';
-// import { YouTube } from '@material-ui/icons';
-import { SpotifyIcon, MediumIcon, StackOverflowIcon, StravaIcon } from "./CustomIcons";
+import { Instagram, LinkedIn, GitHub } from '@material-ui/icons';
+// import { YouTube, Twitter } from '@material-ui/icons';
+// import { MediumIcon } from "./CustomIcons";
+import { SpotifyIcon, StackOverflowIcon, StravaIcon } from "./CustomIcons";
 import LinkButton from "./LinkButton";
 
 const useStyles = makeStyles({
