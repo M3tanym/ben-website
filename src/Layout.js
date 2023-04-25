@@ -96,14 +96,16 @@ const Layout = (props) =>
 						<CardActions className={classes.link_row}>
 							<LinkButton href={"https://www.linkedin.com/in/ben-gillett"} icon={<LinkedIn />}/>
 							<LinkButton href={"https://www.github.com/M3tanym"} icon={<GitHub />}/>
-							<LinkButton href={"https://medium.com/@ben-gillett"} icon={<MediumIcon />}/>
+							{/*<LinkButton href={"https://medium.com/@ben-gillett"} icon={<MediumIcon />}/>*/}
+							{/*Need to find Medium replacement*/}
 							<LinkButton href={"https://stackoverflow.com/users/13765237/ben-gillett"} icon={<StackOverflowIcon />}/>
 						</CardActions>
 						<CardActions className={classes.link_row}>
 							<LinkButton href={"https://www.instagram.com/benjamin_gillett"} icon={<Instagram />}/>
-							<LinkButton href={"https://twitter.com/BnjmnGillett"} icon={<Twitter />}/>
+							{/*<LinkButton href={"https://twitter.com/BnjmnGillett"} icon={<Twitter />}/>*/}
+							{/*Elon ruined Twitter so not linking that anymore*/}
 							{/*<LinkButton href={"https://www.youtube.com/channel/UCDDCEvRr9bflGGlXrbyKkHQ"} icon={<YouTube />}/>*/}
-							{/*YouTube account not mature enough for profile yet...*/}
+							{/*YouTube account not mature enough for sharing yet*/}
 							<LinkButton href={"https://www.strava.com/athletes/42381976"} icon={<StravaIcon />}/>
 							<LinkButton href={"https://open.spotify.com/user/thesilentwatcher7"} icon={<SpotifyIcon />}/>
 						</CardActions>
