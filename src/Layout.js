@@ -33,17 +33,17 @@ const useStyles = makeStyles({
 	},
 	title: {
 		fontSize: "3rem",
-		fontFamily: "monospace",
+		fontFamily: "Menlo, monospace",
 		fontWeight: "bold",
-		lineHeight: "0.8em"
+		lineHeight: "0.85em"
 	},
 	info: {
 		marginBottom: "20px",
-		fontFamily: "monospace",
+		fontFamily: "Menlo, monospace",
 		fontSize: "1.2rem",
 	},
 	plat: {
-		fontFamily: "monospace"
+		fontFamily: "Menlo, monospace"
 	},
 	link_row: {
 		display:'flex',
