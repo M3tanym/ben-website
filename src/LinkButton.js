@@ -7,9 +7,9 @@ const LinkButton = props => {
         <Tooltip title={props.tooltipText}>
             <IconButton
                 href={props.href}
-                target="_blank"
-                rel="noopener"
-                className={props.className ? props.className : ""}
+                target={props.newTab ? '_blank' : ''}
+                rel='noopener'
+                className={props.className ? props.className : ''}
             >
                 {props.icon}
             </IconButton>

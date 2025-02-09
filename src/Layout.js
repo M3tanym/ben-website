@@ -90,13 +90,16 @@ const Layout = (props) => {
                         <CardActions className={classes.link_row}>
                             <LinkButton href={"https://www.linkedin.com/in/ben-gillett"}
                                         icon={<LinkedInIcon/>}
-                                        tooltipText={"LinkedIn"}/>
+                                        tooltipText={"LinkedIn"}
+                                        newTab/>
                             <LinkButton href={"https://www.github.com/M3tanym"}
                                         icon={<GitHubIcon/>}
-                                        tooltipText={"GitHub"}/>
+                                        tooltipText={"GitHub"}
+                                        newTab/>
                             <LinkButton href={"https://stackoverflow.com/users/13765237/ben-gillett"}
                                         icon={<StackOverflowIcon/>}
-                                        tooltipText={"StackOverflow"}/>
+                                        tooltipText={"StackOverflow"}
+                                        newTab/>
                             <LinkButton href={"https://blog.bengillett.com"}
                                         icon={<BlogIcon/>}
                                         tooltipText={"Blog"}/>
@@ -104,13 +107,16 @@ const Layout = (props) => {
                         <CardActions className={classes.link_row}>
                             <LinkButton href={"https://www.instagram.com/benjamin_gillett"}
                                         icon={<InstagramIcon/>}
-                                        tooltipText={"Instagram"}/>
+                                        tooltipText={"Instagram"}
+                                        newTab/>
                             <LinkButton href={"https://www.strava.com/athletes/42381976"}
                                         icon={<StravaIcon/>}
-                                        tooltipText={"Strava"}/>
+                                        tooltipText={"Strava"}
+                                        newTab/>
                             <LinkButton href={"https://open.spotify.com/user/thesilentwatcher7"}
                                         icon={<SpotifyIcon/>}
-                                        tooltipText={"Spotify"}/>
+                                        tooltipText={"Spotify"}
+                                        newTab/>
                         </CardActions>
                         {/*<LinkButton href={"https://twitter.com/BnjmnGillett"} icon={<Twitter />}/>*/}
                         {/*Elon ruined Twitter so not linking that anymore*/}
