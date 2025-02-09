@@ -8,7 +8,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Me from "./images/me.jpg";
 
 import { Container, Grid, Typography } from "@material-ui/core";
-import { Instagram, LinkedIn, GitHub, AutoStories } from '@material-ui/icons';
+import { Instagram as InstagramIcon } from '@material-ui/icons';
+import { LinkedIn as LinkedInIcon } from '@material-ui/icons';
+import { GitHub as GitHubIcon } from '@material-ui/icons';
+import { MenuBook as BlogIcon } from '@material-ui/icons';
 // import { YouTube, Twitter } from '@material-ui/icons';
 // import { MediumIcon } from "./CustomIcons";
 import { SpotifyIcon, StackOverflowIcon, StravaIcon } from "./CustomIcons";
@@ -26,7 +29,6 @@ const useStyles = makeStyles({
 		height: "250px"
 	},
 	intro: {
-		// fontFamily: "Lucida Handwriting, cursive, sans-serif",
 		fontFamily: "Square Peg, cursive",
 		fontSize: "2.1rem",
 		lineHeight: "0.85em"
@@ -95,10 +97,10 @@ const Layout = (props) =>
 						</CardContent>
 						<CardActions className={classes.link_row}>
 							<LinkButton href={"https://www.linkedin.com/in/ben-gillett"}
-										icon={<LinkedIn />}
+										icon={<LinkedInIcon />}
 										tooltipText={"LinkedIn"} />
 							<LinkButton href={"https://www.github.com/M3tanym"}
-										icon={<GitHub />}
+										icon={<GitHubIcon />}
 										tooltipText={"GitHub"} />
 							<LinkButton href={"https://stackoverflow.com/users/13765237/ben-gillett"}
 										icon={<StackOverflowIcon />}
@@ -106,7 +108,7 @@ const Layout = (props) =>
 						</CardActions>
 						<CardActions className={classes.link_row}>
 							<LinkButton href={"https://www.instagram.com/benjamin_gillett"}
-										icon={<Instagram />}
+										icon={<InstagramIcon />}
 										tooltipText={"Instagram"} />
 							<LinkButton href={"https://www.strava.com/athletes/42381976"}
 										icon={<StravaIcon />}
@@ -117,7 +119,7 @@ const Layout = (props) =>
 						</CardActions>
 						<CardActions className={classes.link_row}>
 							<LinkButton href={"https://blog.bengillett.com"}
-										icon={<AutoStories />}
+										icon={<BlogIcon />}
 										tooltipText={"Blog"} />
 						</CardActions>
 
