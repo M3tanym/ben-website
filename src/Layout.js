@@ -54,14 +54,8 @@ const useStyles = makeStyles({
 
 const Layout = (props) => {
     const classes = useStyles();
-    const dm = props.darkMode;
-    const bg = dm ? "#303030" : "#fafafa";
-    const img = Me;
-
     return (
         <Container>
-            {/*Mobile accent color (like Safari top bar)*/}
-            <meta name="theme-color" content={bg}/>
             <Grid
                 container
                 direction={"column"}
@@ -75,7 +69,7 @@ const Layout = (props) => {
                     <Card className={classes.me}>
                         <CardMedia
                             className={classes.media}
-                            image={img}
+                            image={Me}
                             title="Image"
                         />
                         <CardContent>

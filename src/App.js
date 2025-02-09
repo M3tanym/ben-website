@@ -22,9 +22,12 @@ const App = () => {
             }),
         [darkMode],
     );
+    const metaTheme = darkMode ? "#303030" : "#fafafa";
 
     return (
         <ThemeProvider theme={theme}>
+            {/*Mobile accent color (like Safari top bar)*/}
+            <meta name="theme-color" content={metaTheme}/>
             <CssBaseline/>
             <SnackbarProvider maxSnack={3} preventDuplicate>
                 <LoadApp darkMode={darkMode}/>
