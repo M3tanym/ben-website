@@ -1,18 +1,20 @@
 import React from "react";
 
-import {IconButton} from "@material-ui/core";
+import {IconButton, Tooltip} from "@material-ui/core";
 
 const LinkButton = props =>
 {
     return (
-        <IconButton
-            href={props.href}
-            target="_blank"
-            rel="noopener"
-            className={props.className ? props.className : ""}
-        >
-            {props.icon}
-        </IconButton>
+        <Tooltip title={props.tooltipText}>
+            <IconButton
+                href={props.href}
+                target="_blank"
+                rel="noopener"
+                className={props.className ? props.className : ""}
+            >
+                {props.icon}
+            </IconButton>
+        </Tooltip>
     );
 };
 
