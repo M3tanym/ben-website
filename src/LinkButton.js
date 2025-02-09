@@ -2,8 +2,7 @@ import React from "react";
 
 import {IconButton, Tooltip} from "@material-ui/core";
 
-const LinkButton = props =>
-{
+const LinkButton = props => {
     return (
         <Tooltip title={props.tooltipText}>
             <IconButton
