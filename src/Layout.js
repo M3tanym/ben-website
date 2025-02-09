@@ -105,6 +105,9 @@ const Layout = (props) =>
 							<LinkButton href={"https://stackoverflow.com/users/13765237/ben-gillett"}
 										icon={<StackOverflowIcon />}
 										tooltipText={"StackOverflow"} />
+							<LinkButton href={"https://blog.bengillett.com"}
+										icon={<BlogIcon />}
+										tooltipText={"Blog"} />
 						</CardActions>
 						<CardActions className={classes.link_row}>
 							<LinkButton href={"https://www.instagram.com/benjamin_gillett"}
@@ -117,12 +120,6 @@ const Layout = (props) =>
 										icon={<SpotifyIcon />}
 										tooltipText={"Spotify"} />
 						</CardActions>
-						<CardActions className={classes.link_row}>
-							<LinkButton href={"https://blog.bengillett.com"}
-										icon={<BlogIcon />}
-										tooltipText={"Blog"} />
-						</CardActions>
-
 						{/*<LinkButton href={"https://twitter.com/BnjmnGillett"} icon={<Twitter />}/>*/}
 						{/*Elon ruined Twitter so not linking that anymore*/}
 						{/*<LinkButton href={"https://www.youtube.com/channel/UCDDCEvRr9bflGGlXrbyKkHQ"} icon={<YouTube />}/>*/}
