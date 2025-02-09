@@ -70,7 +70,7 @@ const Layout = (props) => {
                         <CardMedia
                             className={classes.media}
                             image={Me}
-                            title="Image"
+                            title="Me"
                         />
                         <CardContent>
                             <Typography className={classes.intro}>
