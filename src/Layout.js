@@ -37,7 +37,7 @@ const useStyles = makeStyles({
 		fontSize: "3rem",
 		fontFamily: "Menlo, monospace",
 		fontWeight: "bold",
-		lineHeight: "0.85em"
+		lineHeight: "0.9em"
 	},
 	info: {
 		marginBottom: "20px",
