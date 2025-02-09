@@ -6,16 +6,15 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Me from "./images/me.jpg";
-
 import { Container, Grid, Typography } from "@material-ui/core";
 import { Instagram as InstagramIcon } from '@material-ui/icons';
 import { LinkedIn as LinkedInIcon } from '@material-ui/icons';
 import { GitHub as GitHubIcon } from '@material-ui/icons';
 import { MenuBook as BlogIcon } from '@material-ui/icons';
-// import { YouTube, Twitter } from '@material-ui/icons';
-// import { MediumIcon } from "./CustomIcons";
 import { SpotifyIcon, StackOverflowIcon, StravaIcon } from "./CustomIcons";
 import LinkButton from "./LinkButton";
+// import { YouTube, Twitter } from '@material-ui/icons';
+// import { MediumIcon } from "./CustomIcons";
 
 const useStyles = makeStyles({
 	main: {
