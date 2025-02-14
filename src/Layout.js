@@ -18,11 +18,10 @@ import LinkButton from "./LinkButton";
 
 const useStyles = makeStyles({
     main: {
-        height: "90vh"
+        height: "100vh",
     },
     me: {
         width: "350px",
-        marginTop: "7vh"
     },
     media: {
         height: "250px"
@@ -52,19 +51,17 @@ const useStyles = makeStyles({
     }
 });
 
-const Layout = (props) => {
+const Layout = () => {
     const classes = useStyles();
     return (
         <Container>
             <Grid
                 container
-                direction={"column"}
-                alignContent={"center"}
-                alignItems={"center"}
-                spacing={2}
+                direction={'row'}
+                justifyContent={'center'}
+                alignItems={'center'}
                 className={classes.main}
             >
-
                 <Grid item>
                     <Card className={classes.me}>
                         <CardMedia
