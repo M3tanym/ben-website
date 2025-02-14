@@ -18,7 +18,7 @@ import LinkButton from "./LinkButton";
 
 const useStyles = makeStyles({
     main: {
-        height: "100vh",
+        height: "88vh",
     },
     me: {
         width: "350px",
