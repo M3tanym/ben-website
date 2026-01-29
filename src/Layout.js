@@ -99,7 +99,7 @@ const Layout = () => {
                                         newTab/>
                             <LinkButton href={"https://blog.bengillett.com"}
                                         icon={<BlogIcon/>}
-                                        tooltipText={"Blog"}/>
+                                        tooltipText={"My Blog"}/>
                         </CardActions>
                         <CardActions className={classes.link_row}>
                             <LinkButton href={"https://www.instagram.com/benjamin_gillett"}
