@@ -10,15 +10,18 @@ import {Container, Grid, Typography} from "@material-ui/core";
 import {Instagram as InstagramIcon} from '@material-ui/icons';
 import {LinkedIn as LinkedInIcon} from '@material-ui/icons';
 import {GitHub as GitHubIcon} from '@material-ui/icons';
-import {MenuBook as BlogIcon} from '@material-ui/icons';
-import {SpotifyIcon, StackOverflowIcon, StravaIcon} from "./CustomIcons";
+import {MicrochipIcon, SpotifyIcon, StackOverflowIcon, StravaIcon} from "./CustomIcons";
 import LinkButton from "./LinkButton";
 // import { YouTube, Twitter } from '@material-ui/icons';
 // import { MediumIcon } from "./CustomIcons";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
+    icon_button: {
+        color: theme.palette.text.primary,
+    },
     main: {
-        height: "88vh",
+        marginTop: "5vh",
+        height: "50vh",
     },
     me: {
         width: "350px",
@@ -45,11 +48,14 @@ const useStyles = makeStyles({
     plat: {
         fontFamily: "Menlo, monospace"
     },
+    card_content: {
+        paddingBottom: "4px",
+    },
     link_row: {
         display: 'flex',
         justifyContent: 'center'
-    }
-});
+    },
+}));
 
 const Layout = () => {
     const classes = useStyles();
@@ -69,7 +75,7 @@ const Layout = () => {
                             image={Me}
                             title="Me"
                         />
-                        <CardContent>
+                        <CardContent className={classes.card_content}>
                             <Typography className={classes.intro}>
                                 Hello, I'm
                             </Typography>
@@ -80,40 +86,47 @@ const Layout = () => {
                                 Software Engineer
                             </Typography>
                             <hr/>
-                            <Typography className={classes.plat}>
-                                You can find me on these platforms:
-                            </Typography>
+                            {/*<Typography className={classes.plat}>*/}
+                            {/*    My Stuff:*/}
+                            {/*</Typography>*/}
                         </CardContent>
                         <CardActions className={classes.link_row}>
+                            <LinkButton href={"https://blog.bengillett.com"}
+                                        icon={<MicrochipIcon/>}
+                                        tooltipText={"My Blog"}
+                                        className={classes.icon_button}/>
                             <LinkButton href={"https://www.linkedin.com/in/ben-gillett"}
                                         icon={<LinkedInIcon/>}
                                         tooltipText={"LinkedIn"}
-                                        newTab/>
+                                        newTab
+                                        className={classes.icon_button}/>
                             <LinkButton href={"https://www.github.com/M3tanym"}
                                         icon={<GitHubIcon/>}
                                         tooltipText={"GitHub"}
-                                        newTab/>
+                                        newTab
+                                        className={classes.icon_button}/>
                             <LinkButton href={"https://stackoverflow.com/users/13765237/ben-gillett"}
                                         icon={<StackOverflowIcon/>}
                                         tooltipText={"StackOverflow"}
-                                        newTab/>
-                            <LinkButton href={"https://blog.bengillett.com"}
-                                        icon={<BlogIcon/>}
-                                        tooltipText={"My Blog"}/>
+                                        newTab
+                                        className={classes.icon_button}/>
                         </CardActions>
                         <CardActions className={classes.link_row}>
                             <LinkButton href={"https://www.instagram.com/benjamin_gillett"}
                                         icon={<InstagramIcon/>}
                                         tooltipText={"Instagram"}
-                                        newTab/>
+                                        newTab
+                                        className={classes.icon_button}/>
                             <LinkButton href={"https://www.strava.com/athletes/42381976"}
                                         icon={<StravaIcon/>}
                                         tooltipText={"Strava"}
-                                        newTab/>
+                                        newTab
+                                        className={classes.icon_button}/>
                             <LinkButton href={"https://open.spotify.com/user/thesilentwatcher7"}
                                         icon={<SpotifyIcon/>}
                                         tooltipText={"Spotify"}
-                                        newTab/>
+                                        newTab
+                                        className={classes.icon_button}/>
                         </CardActions>
                         {/*<LinkButton href={"https://twitter.com/BnjmnGillett"} icon={<Twitter />}/>*/}
                         {/*Elon ruined Twitter so not linking that anymore*/}
